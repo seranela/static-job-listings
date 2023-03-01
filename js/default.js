@@ -134,8 +134,12 @@ function createFilter(filterCategory, filterName) {
 }
 
 function toggleFilter(e) {
+	// Get filter category
 	const filterCategory = Object.keys(e.currentTarget.dataset)[0];
+	// Find index position of filter category
 	const filterIndex = activeFilters[filterCategory].indexOf(e.target.innerText);
+
+	// Filter exists
 	if (filterIndex !== -1) {
 		if (filterCategory === 'role' || filterCategory === 'level') {
 			activeFilters[filterCategory] = '';
@@ -143,19 +147,21 @@ function toggleFilter(e) {
 			activeFilters[filterCategory].splice(filterIndex, 1);
 		}
 		removeFilter(e);
-	} else {
+	}
+	// Filter doesn't exist
+	else {
 		if (filterCategory === 'role' || filterCategory === 'level') {
 			activeFilters[filterCategory] = e.target.innerText;
 		} else {
 			activeFilters[filterCategory].push(e.target.innerText);
 		}
-
 		createFilter(filterCategory, e.target.innerText);
 	}
 
 	filterJobs(e.target.innerText);
 }
 
+// Clear button pressed in the filters container
 function clearFilters() {
 	activeFilters = {
 		'role': '',
@@ -172,6 +178,10 @@ function clearFilters() {
 	});
 }
 
+document.querySelector('#button-clear-filters')
+	.addEventListener('click', clearFilters);
+
+// Job listing position title clicked
 function selectJob(e) {
 	e.preventDefault();
 	const job = e.currentTarget.parentNode.parentNode;
@@ -182,16 +192,12 @@ function selectJob(e) {
 	}
 }
 
-document.querySelector('#button-clear-filters')
-	.addEventListener('click', clearFilters);
-
 /* --- Job Postings --- */
 
 // Create job post
 function createJob(data) {
 	const job = document.createElement('article');
 	job.className = 'job';
-	//article.classList.add('job-selected');
 
 	// Employer Logo
 	const jobLogo = document.createElement('img');
