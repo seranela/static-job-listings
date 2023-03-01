@@ -152,7 +152,7 @@ body {
 	color: var(--color-primary-mute-dark-cyan);
 }
 
-/* Job Postings */
+/* Job Listings */
 
 .jobs {
 	display: flex;
@@ -285,7 +285,7 @@ body {
 		margin-bottom: -4rem;
 	}
 
-	/* Job Postings */
+	/* Job Listings */
 
 	.jobs {
 		background-color: var(--color-neutral-light-gray-cyan1);
