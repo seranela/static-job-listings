@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/job-listings-with-filtering-8_sZsAoa6M](https://www.frontendmentor.io/solutions/job-listings-with-filtering-8_sZsAoa6M)
+- Live Site URL: [https://seranela.github.io/static-job-listings/](https://seranela.github.io/static-job-listings/)
 
 ## My process
 
